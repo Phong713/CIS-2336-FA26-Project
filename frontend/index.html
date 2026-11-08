@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meeting Rooms | UH Student Center</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/rooms.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="monogram">UH</span> Student Center</a>
+      <div class="nav-links">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="booking.html">Book a Room</a>
+        <a href="my-bookings.html">My Bookings</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <header class="page-heading">
+      <h1>Meeting rooms</h1>
+      <p>Welcome to the University of Houston Student Center. Compare rooms by size, equipment and food policy, then reserve one for your club.</p>
+    </header>
+    <section id="room-list" class="room-list" aria-label="Available rooms">
+      <p role="status">Loading rooms…</p>
+    </section>
+  </main>
+
+  <template id="room-template">
+    <article class="room-card">
+      <div class="card-heading">
+        <h2 class="room-name"></h2>
+        <p class="room-capacity"></p>
+      </div>
+      <div class="equipment">
+        <h3>Equipment</h3>
+        <p class="equipment-list"></p>
+      </div>
+      <div class="card-footer">
+        <span class="food-policy"></span>
+        <a class="text-link book-room">Book room <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </template>
+</body>
+</html>

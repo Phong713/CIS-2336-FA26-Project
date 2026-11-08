@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Room | UH Student Center</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/booking.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="monogram">UH</span> Student Center</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="booking.html" aria-current="page">Book a Room</a>
+        <a href="my-bookings.html">My Bookings</a>
+      </div>
+    </nav>
+  </header>
+  <main class="narrow-page">
+    <header class="page-heading">
+      <h1>Book a room</h1>
+      <p>Choose a room and enter your meeting time in Houston local time.</p>
+    </header>
+    <form id="booking-form" class="form-panel">
+      <div class="field">
+        <label for="room-select">Room</label>
+        <select id="room-select" name="roomId" required disabled>
+          <option value="">Select a room</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="club-name">Club name</label>
+        <input id="club-name" name="clubName" type="text" required>
+      </div>
+      <div class="schedule-fields">
+        <div class="field">
+          <label for="date">Date</label>
+          <input id="date" name="date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="start-time">Start time</label>
+          <input id="start-time" name="startTime" type="time" required>
+        </div>
+        <div class="field">
+          <label for="end-time">End time</label>
+          <input id="end-time" name="endTime" type="time" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="purpose">Purpose <span class="optional">(optional)</span></label>
+        <textarea id="purpose" name="purpose" rows="3" placeholder="What is the meeting for?"></textarea>
+      </div>
+      <button class="primary-button" type="submit" disabled>Submit booking</button>
+    </form>
+    <div class="form-feedback">
+      <p id="form-status" class="status-message" role="status"></p>
+      <a id="view-bookings" class="text-link" href="my-bookings.html" hidden>View my bookings <span aria-hidden="true">→</span></a>
+    </div>
+  </main>
+</body>
+</html>

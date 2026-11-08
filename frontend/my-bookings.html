@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Bookings | UH Student Center</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/my-bookings.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="monogram">UH</span> Student Center</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="booking.html">Book a Room</a>
+        <a href="my-bookings.html" aria-current="page">My Bookings</a>
+      </div>
+    </nav>
+  </header>
+  <main class="list-page">
+    <header class="page-heading">
+      <h1>My bookings</h1>
+      <p>View club reservations or cancel a booking to make the room available again.</p>
+    </header>
+    <p id="bookings-status" class="status-message" role="status"></p>
+    <section id="bookings-list" class="bookings-list" aria-label="Current bookings">
+      <p role="status">Loading bookings…</p>
+    </section>
+  </main>
+
+  <template id="booking-template">
+    <article class="booking-item">
+      <div class="booking-details">
+        <h2 class="booking-room"></h2>
+        <p class="booking-when"></p>
+        <p class="booking-club"></p>
+        <p class="booking-purpose"></p>
+      </div>
+      <button type="button" class="cancel-button">Cancel</button>
+    </article>
+  </template>
+  <template id="empty-template">
+    <div class="empty-state">
+      <h2>No bookings yet</h2>
+      <p>Once you reserve a room, your booking will appear here.</p>
+      <a href="booking.html" class="text-link">Book a room <span aria-hidden="true">→</span></a>
+    </div>
+  </template>
+</body>
+</html>
